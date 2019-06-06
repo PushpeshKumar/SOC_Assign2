@@ -1,0 +1,16 @@
+<style>table {
+    background-color: aqua;
+}
+
+th {
+    background-color: yellow;
+    color: brown;
+    font: 20;
+}
+
+td {
+    background-color: aliceblue;
+    color: black;
+}
+
+</style>
