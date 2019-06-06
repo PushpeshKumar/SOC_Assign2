@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>2.2</title>
+</head>
+
+<style>
+    table {
+        background-color: aqua;
+    }
+    
+    th {
+        background-color: yellow;
+        color: brown;
+        font: 20;
+    }
+    
+    td {
+        background-color: aliceblue;
+        color: black;
+    }
+</style>
+
+
+<center>
+
+    Enter Text Here : <input type='text' id='name' value='search name'></a>
+    <input type="button" value='Go' onclick="search()"></a>
+    <br><br><br>
+    <!--<button align='center'>Go</button> will also work-->
+
+    <table border="10" cellspacing='10' cellpadding='10'>
+        <tr id='verticals'>
+            <th>NAME</th>
+            <th>ROLL NO.</th>
+            <th>YEAR</th>
+        </tr>
+        <tr>
+            <td>Pushpesh</td>
+            <td>180570</td>
+            <td>Y18</td>
+        </tr>
+        <tr>
+            <td>Yuvraj</td>
+            <td>180900</td>
+            <td>Y18</td>
+        </tr>
+        <tr>
+            <td>Shreyansh</td>
+            <td>180762</td>
+            <td>Y18</td>
+        </tr>
+        <tr>
+            <td>Pragyan</td>
+            <td>170519</td>
+            <td>Y17</td>
+        </tr>
+        <tr>
+            <td>Aakarsh</td>
+            <td>170004</td>
+            <td>Y17</td>
+        </tr>        
+    </table>
+
+</center>
+
+
+<script>
+    function search() {
+        var name = document.getElementById("name").value.toUpperCase();
+        var tr = document.getElementsByTagName("tr");
+        for (var i = 0; i < tr.length; i++) {
+            var td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                var data = td.textContent || td.innerText;
+                if (data.toUpperCase().indexOf(name) > -1)
+                    tr[i].style.display = "";
+                else
+                    tr[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</html>
